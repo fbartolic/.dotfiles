@@ -123,3 +123,6 @@ export PATH="/home/fran/anaconda3/bin:$PATH"
 export EDITOR=nvim
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+# enable vi mode
+set -o vi

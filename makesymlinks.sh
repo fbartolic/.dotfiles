@@ -6,9 +6,6 @@
 
 dir=~/.dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
-files="bashrc bash_aliases"    # list of files/folders to symlink in homedir
-
-##########
 
 # create dotfiles_old in homedir
 echo "Creating $olddir for backup of any existing dotfiles in ~"
@@ -19,14 +16,15 @@ echo "...done"
 echo "Changing to the $dir directory"
 cd $dir
 echo "...done"
-
-# move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks
-for file in $files; do
-    echo "Moving any existing dotfiles from ~ to $olddir"
-    mv ~/.$file ~/dotfiles_old/
-    echo "Creating symlink to $file in home directory."
-    ln -s $dir/$file ~/.$file
-done
-mv ~/.config/nvim/init.vim  ~/dotfiles_old/
-echo "Creating a symlink to the init.vim file in the ~/.config/nvim directory"
+echo "Moving old dotfiled to $olddir directory"
+mv ~/.bashrc ~/.bash_aliases ~/.config/nvim/init.vim $olddir
+echo "Making a symlink to new dotfiles"
+ln -s $dir/.bashrc ~/.bashrc
+ln -s $dir/.bash_aliases ~/.bash_aliases
 ln -s $dir/init.vim  ~/.config/nvim/init.vim
+echo "...done"
+echo "Sourcing the dotfiles"
+source ~/.dotfiles/.bashrc
+source $dir/.bash_aliases
+source $dir/init.vim
+echo "...done"
