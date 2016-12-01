@@ -12,10 +12,12 @@ Plug 'airblade/vim-gitgutter'
 Plug 'Valloric/YouCompleteMe'
 Plug 'tmhedberg/SimpylFold'
 Plug 'nvie/vim-flake8'
+Plug 'Konfekt/FastFold'
 call plug#end()
 
 """"""Plugin specific settings""""""
 let NERDTreeIgnore=['\.pyc$', '\~$']                         "Ignore files in NERDTree
+map <silent> <C-n> :NERDTreeFocus<CR>
 let g:ycm_autoclose_preview_window_after_completion=1
 let g:SimpylFold_docstring_preview=1                         "Don't fold Python doctrings
 let g:gruvbox_italic=1                                       "Enable italics in terminal
@@ -23,9 +25,10 @@ let g:gruvbox_contrast_dark='soft'                           "Soft contrast
 let g:vimtex_latexmk_progname='nvr'
 let g:vimtex_view_method='zathura'
 let g:vimtex_latexmk_build_dir='./build'
+let g:vimtex_indent_enabled = 0
 let g:flake8_show_in_gutter=1
 let g:flake8_quickfix_location='belowright'
-
+let g:tex_conceal = "" 
 """"""Syntax, colors and UI""""""
 colorscheme gruvbox
 set bg=dark                                                  "Dark background
@@ -91,6 +94,10 @@ au BufRead,BufNewFile *.c,*.h set autoindent
 au         BufNewFile *.c,*.h set fileformat=unix
 au BufRead,BufNewFile *.c,*.h let b:comment_leader = '/* '
 
+" Tex
+au FileType tex setlocal nocursorline
+au FileType tex :NoMatchParen
+
 """"""Performance optimization""""""
 set lazyredraw
 set nocursorcolumn
@@ -101,3 +108,4 @@ set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 """"""Misc""""""
 set clipboard=unnamedplus
 let mapleader=","
+let maplocalleader=","
