@@ -1,5 +1,7 @@
+filetype off
+
 """"""Plugins"""""""
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.config/nvim/plugged')
 Plug 'neovim/python-client'                                  "Python support
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -13,15 +15,12 @@ Plug 'Valloric/YouCompleteMe'
 Plug 'tmhedberg/SimpylFold'
 Plug 'nvie/vim-flake8'
 Plug 'Konfekt/FastFold'
+Plug 'Honza/vim-snippets'
 call plug#end()
 
 """"""Plugin specific settings""""""
-let NERDTreeIgnore=['\.pyc$', '\~$']                         "Ignore files in NERDTree
-map <silent> <C-n> :NERDTreeFocus<CR>
-let g:ycm_autoclose_preview_window_after_completion=1
-let g:SimpylFold_docstring_preview=1                         "Don't fold Python doctrings
-let g:gruvbox_italic=1                                       "Enable italics in terminal
-let g:gruvbox_contrast_dark='soft'                           "Soft contrast
+"Latex settings
+let g:tex_flavor='latex'
 let g:vimtex_latexmk_progname='nvr'
 let g:vimtex_view_method='zathura'
 let g:vimtex_latexmk_build_dir='./build'
@@ -29,6 +28,22 @@ let g:vimtex_indent_enabled = 0
 let g:flake8_show_in_gutter=1
 let g:flake8_quickfix_location='belowright'
 let g:tex_conceal = "" 
+
+"Snippets
+let g:UltiSnipsSnippetDirectories=["mysnippets"]
+let g:UltiSnipsExpandTrigger="<c-j>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+let g:UltiSnipsListSnippets="<c-u>"
+
+"Other plugins
+let NERDTreeIgnore=['\.pyc$', '\~$']                         "Ignore files in NERDTree
+map <silent> <C-n> :NERDTreeFocus<CR>
+let g:ycm_autoclose_preview_window_after_completion=1
+let g:SimpylFold_docstring_preview=1                         "Don't fold Python doctrings
+let g:gruvbox_italic=1                                       "Enable italics in terminal
+let g:gruvbox_contrast_dark='soft'                           "Soft contrast
+
 """"""Syntax, colors and UI""""""
 colorscheme gruvbox
 set bg=dark                                                  "Dark background

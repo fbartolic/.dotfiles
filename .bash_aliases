@@ -1,5 +1,7 @@
 ## Use a long listing format ##
 alias ll='ls -la'
+alias la='ls -A'
+alias l='ls -CF'
 ## Show hidden files ##
 alias l.='ls -d .* --color=auto'
 ## Automatically do ls after cd

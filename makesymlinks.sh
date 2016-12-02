@@ -17,12 +17,15 @@ echo "Changing to the $dir directory"
 cd $dir
 echo "...done"
 echo "Moving old dotfiled to $olddir directory"
-mv ~/.bashrc ~/.bash_aliases ~/.config/nvim/init.vim $olddir
+mv ~/.bashrc ~/.bash_aliases ~/.config/nvim/init.vim ~/.config/nvim/mysnippets  $olddir
+
 echo "Making a symlink to new dotfiles"
 ln -s $dir/.bashrc ~/.bashrc
 ln -s $dir/.bash_aliases ~/.bash_aliases
 ln -s $dir/init.vim  ~/.config/nvim/init.vim
+ln -s $dir/mysnippets ~/.config/nvim
 echo "...done"
+
 echo "Sourcing the dotfiles"
 source ~/.dotfiles/.bashrc
 source $dir/.bash_aliases

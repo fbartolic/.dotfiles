@@ -1,0 +1,24 @@
+priority 0
+
+snippet tabf "a floating table"
+\begin{table}[h!]
+\centering
+\begin{tabular}{c ${2}}
+${3}
+\hline
+\end{tabular}
+\caption{${4}}
+\label{table:${1}}
+\end{table}
+${0}
+endsnippet
+
+snippet fig "figure environment (includegraphics)"
+\begin{figure}[htb]
+\centering
+		\includegraphics[width=\linewidth]{figures/${1}}
+\caption{${3}}
+\label{fig:${2}}
+\end{figure}
+${0}
+endsnippet
