@@ -22,3 +22,88 @@ snippet fig "figure environment (includegraphics)"
 \end{figure}
 ${0}
 endsnippet
+
+snippet ref
+~\ref{${1:fig:}$2} $0
+endsnippet
+
+snippet latextemplate "A basic article style template"
+\documentclass[11pt,a4paper]{article}
+
+% Language packages
+\usepackage[croatian]{babel}
+\usepackage[utf8x]{inputenc}
+
+% Layout packages
+\usepackage{geometry}
+\usepackage{layout}
+\geometry{ 
+  left=2.5cm,
+  right=2.5cm,
+  top=3.5cm,
+  bottom=3cm
+}
+\usepackage{fancyhdr}
+\usepackage{wrapfig}
+\usepackage{lastpage}
+\usepackage{pdfpages} % za ubacit pdf straice
+
+% Figure packages
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+
+% Other packages
+\usepackage{gensymb} % for a degree symbol 
+\usepackage{url}
+\usepackage{epstopdf}
+\usepackage[font=scriptsize]{caption}
+\usepackage{amsmath}
+\usepackage{placeins}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+	colorlinks,
+    citecolor=blue,
+    filecolor=blue,
+    linkcolor=blue,
+    urlcolor=blue
+}
+\usepackage{siunitx} % for proper units in math
+
+% Custom commands
+\newcommand{\ud}{\,\mathrm{d}}
+\newcommand{\vect}[1]{\boldsymbol{\vec{#1}}}
+
+% Citations 
+\usepackage{natbib}
+\bibliographystyle{plain}
+\renewcommand\bibname{References}
+\newcommand{\apj}{ApJ}
+\newcommand{\apjs}{ApJ}
+\newcommand{\apjl}{ApJ}
+\newcommand{\mnras}{MNRAS}
+\newcommand{\aap}{A\&A}
+\newcommand{\aj}{AJ}
+\newcommand{\nat}{Nature}
+\newcommand{\pre}{Phys.~Rev.~E}
+\newcommand{\araa}{ARA\&A}
+\newcommand{\icarus}{Icarus}
+\newcommand{\pasp}{PASP}
+\newcommand{\prd}{Phys.~Rev.~D}
+%
+\author{Fran Bartolić}
+\title{${1:Sveučilište u Rijeci}\\\vspace{30pt}
+\textbf{$2}\\\vspace{30pt}}
+\begin{document}
+\maketitle
+$3
+\FloatBarrier
+\bibliography{Literatura}
+\begin{thebibliography}{1}
+
+\bibitem{bar} 
+
+\end{thebibliography}
+\bibliographystyle{report}
+\end{document}
+endsnippet
