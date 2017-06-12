@@ -16,6 +16,8 @@ Plug 'tmhedberg/SimpylFold'
 Plug 'nvie/vim-flake8'
 Plug 'Konfekt/FastFold'
 Plug 'Honza/vim-snippets'
+Plug 'mhinz/vim-startify'
+Plug 'kien/ctrlp.vim'
 call plug#end()
 
 """"""Plugin specific settings""""""
@@ -45,7 +47,7 @@ let g:gruvbox_italic=1                                       "Enable italics in 
 let g:gruvbox_contrast_dark='soft'                           "Soft contrast
 
 """"""Syntax, colors and UI""""""
-colorscheme gruvbox
+colorscheme gruvbox 
 set bg=dark                                                  "Dark background
 set termguicolors                                            "Better colors in terminal
 set number                                                   "Line numbers
@@ -74,6 +76,7 @@ nnoremap <C-H> <C-W><C-H>
 """"""Tabs, indents and folding""""""
 set tabstop=4
 set softtabstop=4
+set shiftwidth=4
 set expandtab
 filetype indent on                                           "Indent based on filetype
 set foldmethod=indent
@@ -124,3 +127,5 @@ set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 set clipboard=unnamedplus
 let mapleader=","
 let maplocalleader=","
+set encoding=utf-8
+set fileencoding=utf-8
