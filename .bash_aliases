@@ -1,9 +1,22 @@
+## SSH aliases
+alias ssh_pallas='ssh franb@pallas.astro.lu.se'
+alias ssh_prelog='ssh fbartolic@prelog.uniri.hr'
+alias ssh_alex='ssh -i fbartolic fbartolic@pc283.astro.lu.se'
+
+## FTP aliases
+alias sftp_pallas='sftp franb@pallas.astro.lu.se'
+alias sftp_prelog='sftp fbartolic@prelog.uniri.hr'
+alias sftp_alex='sftp -i fbartolic fbartolic@pc283.astro.lu.se'
+ 
+
 ## Use a long listing format ##
 alias ll='ls -la'
 alias la='ls -A'
 alias l='ls -CF'
+
 ## Show hidden files ##
 alias l.='ls -d .* --color=auto'
+
 ## Automatically do ls after cd
 function cs() {
 	cd "$@" && ls
@@ -17,6 +30,7 @@ alias ..='cd ..'
 alias ...='cd ../../../'
 alias ....='cd ../../../../'
 alias .....='cd ../../../../'
+
 ## Colorize the grep command output for ease of use (good for log files)##
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'

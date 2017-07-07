@@ -122,3 +122,9 @@ export EDITOR=nvim
 
 # enable vi mode
 set -o vi
+
+# unlimited processes
+ulimit -s unlimited
+
+# added by Anaconda3 4.3.1 installer
+export PATH="/home/fran/anaconda3/bin:$PATH"
