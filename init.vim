@@ -3,8 +3,6 @@ filetype off
 """"""Plugins"""""""
 call plug#begin('~/.config/nvim/plugged')
 Plug 'neovim/python-client'                                  "Python support
-Plug 'scrooloose/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'lervag/vimtex'                                         "Latex plugin
 Plug 'vim-airline/vim-airline'                               "Vim airline
 Plug 'morhetz/gruvbox'                                       "Gruvbox plugin theme
