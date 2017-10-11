@@ -25,6 +25,10 @@ snippet fig "figure environment (includegraphics)"
 ${0}
 endsnippet
 
+snippet code "monospace font for code snippets"
+\texttt{${1}} ${0}
+endsnippet
+
 snippet ref
 \ref{${1:fig:}$2} $0
 endsnippet
@@ -52,12 +56,6 @@ snippet latextemplate "A basic article style template"
 % Layout and margins 
 \usepackage[margin=1in]{geometry}
 \usepackage{layout}
-\geometry{
-  left=2.5cm,
-  right=2.5cm,
-  top=3.5cm,
-  bottom=3cm
-}
 \usepackage{wrapfig}
 \usepackage{lastpage}
 \usepackage{pdfpages} % za ubacit pdf straice

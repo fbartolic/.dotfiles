@@ -28,6 +28,8 @@ let g:vimtex_indent_enabled = 0
 let g:flake8_show_in_gutter=1
 let g:flake8_quickfix_location='belowright'
 let g:tex_conceal = "" 
+setlocal spell
+setlocal spelllang=en
 
 "Snippets
 let g:UltiSnipsSnippetDirectories=["mysnippets"]
