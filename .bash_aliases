@@ -1,13 +1,8 @@
 ## SSH aliases
-alias ssh_pallas='ssh franb@pallas.astro.lu.se'
-alias ssh_prelog='ssh fbartolic@prelog.uniri.hr'
-alias ssh_alex='ssh -i fbartolic fbartolic@pc283.astro.lu.se'
+alias ssh_ken='ssh fb90@kennedy.st-andrews.ac.uk'
 
 ## FTP aliases
-alias sftp_pallas='sftp franb@pallas.astro.lu.se'
-alias sftp_prelog='sftp fbartolic@prelog.uniri.hr'
-alias sftp_alex='sftp -i fbartolic fbartolic@pc283.astro.lu.se'
- 
+alias sftp_ken='sftp fb90@kennedy.st-andrews.ac.uk'
 
 ## Use a long listing format ##
 alias ll='ls -la'

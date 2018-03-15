@@ -112,9 +112,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# added by Anaconda3 4.2.0 installer
-export PATH="/home/fran/anaconda3/bin:$PATH"
-
 # default text editor
 export EDITOR=nvim
 
@@ -126,5 +123,10 @@ set -o vi
 # unlimited processes
 ulimit -s unlimited
 
-# added by Anaconda3 4.3.1 installer
+# DNest4 useful env. variable
+export DNEST4_PATH=/home/fran/drive/projects
+#. /home/fran/anaconda3/etc/profile.d/conda.sh
+#conda activate
+
+# added by Anaconda3 installer
 export PATH="/home/fran/anaconda3/bin:$PATH"
