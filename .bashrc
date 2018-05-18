@@ -1,4 +1,4 @@
-# ~/.bashrc: executed by bash(1) for non-login shells.
+#~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
@@ -130,3 +130,6 @@ export DNEST4_PATH=/home/fran/drive/projects
 
 # added by Anaconda3 installer
 export PATH="/home/fran/anaconda3/bin:$PATH"
+
+# something for Theano
+export MKL_THREADING_LAYER=GNU
