@@ -48,3 +48,6 @@ alias update='sudo apt-get update && sudo apt-get dist-upgrade'
 
 #restart networking
 alias resetwifi='sudo systemctl restart network-manager.service'
+
+# repeat command with sudo
+alias fuck='sudo $(fc -ln -1)'
