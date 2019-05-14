@@ -47,10 +47,9 @@ endsnippet
 
 snippet latextemplate "A basic article style template"
 \RequirePackage[l2tabu, orthodox]{nag} 
-\documentclass[11pt,a4paper,twocolumn]{article}
+\documentclass[11pt,a4paper]{article}
 
 % Language 
-\usepackage[croatian]{babel}
 \usepackage[utf8x]{inputenc}
 
 % Layout and margins 
@@ -58,7 +57,7 @@ snippet latextemplate "A basic article style template"
 \usepackage{layout}
 \usepackage{wrapfig}
 \usepackage{lastpage}
-\usepackage{pdfpages} % za ubacit pdf straice
+\usepackage{titling}
 
 % Figures & tables 
 \usepackage{graphicx,xcolor}
@@ -70,6 +69,8 @@ snippet latextemplate "A basic article style template"
 % Math 
 \usepackage{amsmath,amssymb,bm}
 \usepackage{siunitx} % for proper units 
+\usepackage{mathpazo}
+\usepackage{gensymb}
 
 % Other packages
 \usepackage[activate={true,nocompatibility},final,tracking=true,
@@ -86,12 +87,12 @@ kerning=true,spacing=true,factor=1100,stretch=10,shrink=10]{microtype}
 \usepackage[hidelinks,unicode]{hyperref}
 \hypersetup{
 colorlinks=true,
-citecolor=blue,
-filecolor=blue,
-linkcolor=blue,
-urlcolor=blue
+allcolors=cyan,
 }
 \usepackage{cleveref} % automatically inserts Fig etc. in front
+\usepackage{natbib}
+\bibliographystyle{abbrvnat}
+\setcitestyle{authoryear}
 % of references  
 
 % Settings
@@ -100,19 +101,12 @@ urlcolor=blue
 % Custom commands
 \newcommand{\ud}{\,\mathrm{d}}
 \renewcommand{\vec}[1]{\bm{#1}}
-\author{Fran Bartolić}
-\title{${1:Sveučilište u Rijeci}\\\vspace{30pt}
-\textbf{$2}\\\vspace{30pt}}
+
+\author{Fran Bartoli\'c}
+\title{A basic \LaTeX template }
+
 \begin{document}
 \maketitle
-$3
-\FloatBarrier
-\bibliography{Literatura}
-\begin{thebibliography}{1}
-
-\bibitem{bar} 
-
-\end{thebibliography}
-\bibliographystyle{report}
+Just testing.
 \end{document}
 endsnippet
