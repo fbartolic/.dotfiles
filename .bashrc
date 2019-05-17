@@ -133,3 +133,6 @@ export PATH="/home/fran/anaconda3/bin:$PATH"
 
 # something for Theano
 export MKL_THREADING_LAYER=GNU
+
+# ADS to tex
+export ADS_API_TOKEN="nTdpoknmKpbnNIRPExAOamAOkbd4tgaeJYK3svx2"
