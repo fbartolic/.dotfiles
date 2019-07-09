@@ -136,3 +136,72 @@ export MKL_THREADING_LAYER=GNU
 
 # ADS to tex
 export ADS_API_TOKEN="nTdpoknmKpbnNIRPExAOamAOkbd4tgaeJYK3svx2"
+
+# Bash aliases
+# SSH aliases
+alias ssh_ken='ssh fb90@kennedy.st-andrews.ac.uk'
+
+## FTP aliases
+alias sftp_ken='sftp fb90@kennedy.st-andrews.ac.uk'
+
+## Use a long listing format ##
+alias ll='ls -la'
+alias la='ls -A'
+alias l='ls -CF'
+
+## Show hidden files ##
+alias l.='ls -d .* --color=auto'
+
+## Automatically do ls after cd
+function cs() {
+        cd "$@" && ls
+}
+
+## get rid of command not found ##
+alias cd..='cd ..'
+
+## a quick way to get out of current directory ##
+alias ..='cd ..'
+alias ...='cd ../../../'
+alias ....='cd ../../../../'
+alias .....='cd ../../../../'
+
+## Colorize the grep command output for ease of use (good for log files)##
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+
+alias mount='mount |column -t'
+alias path='echo -e ${PATH//:/\\n}'
+
+#Set nvim as default
+alias vim='nvim'
+alias svim='sudo nvim'
+alias edit='nvim'
+alias vimtex='NVIM_LISTEN_ADDRESS=/tmp/nvim_tex.sock nvim'
+
+# update on one command
+alias update='sudo apt-get update && sudo apt-get dist-upgrade'
+
+#restart networking
+alias resetwifi='sudo systemctl restart network-manager.service'
+
+# repeat command with sudo
+alias fuck='sudo $(fc -ln -1)'
+
+# added by Anaconda3 2019.03 installer
+# >>> conda init >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$(CONDA_REPORT_ERRORS=false '/anaconda3/bin/conda' shell.bash hook 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    \eval "$__conda_setup"
+else
+    if [ -f "/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/anaconda3/etc/profile.d/conda.sh"
+        CONDA_CHANGEPS1=false conda activate base
+    else
+        \export PATH="/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda init <<<
