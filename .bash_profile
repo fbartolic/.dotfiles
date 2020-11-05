@@ -129,7 +129,7 @@ export DNEST4_PATH=/home/fran/drive/projects
 #conda activate
 
 # added by Anaconda3 installer
-export PATH="/home/fran/anaconda3/bin:$PATH"
+export PATH=~/anaconda3/bin:$PATH
 
 # something for Theano
 export MKL_THREADING_LAYER=GNU
@@ -137,8 +137,9 @@ export MKL_THREADING_LAYER=GNU
 # ADS to tex
 export ADS_API_TOKEN="nTdpoknmKpbnNIRPExAOamAOkbd4tgaeJYK3svx2"
 
+
 # Bash aliases
-# SSH aliases
+SH aliases
 alias ssh_ken='ssh fb90@kennedy.st-andrews.ac.uk'
 
 ## FTP aliases
@@ -189,19 +190,18 @@ alias resetwifi='sudo systemctl restart network-manager.service'
 # repeat command with sudo
 alias fuck='sudo $(fc -ln -1)'
 
-# added by Anaconda3 2019.03 installer
-# >>> conda init >>>
+# >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$(CONDA_REPORT_ERRORS=false '/anaconda3/bin/conda' shell.bash hook 2> /dev/null)"
+__conda_setup="$('/Users/fb90/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
-    \eval "$__conda_setup"
+    eval "$__conda_setup"
 else
-    if [ -f "/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/anaconda3/etc/profile.d/conda.sh"
-        CONDA_CHANGEPS1=false conda activate base
+    if [ -f "/Users/fb90/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/fb90/anaconda3/etc/profile.d/conda.sh"
     else
-        \export PATH="/anaconda3/bin:$PATH"
+        export PATH="/Users/fb90/anaconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
-# <<< conda init <<<
+# <<< conda initialize <<<
+
